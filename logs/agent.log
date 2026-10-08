@@ -1,0 +1,233 @@
+
+============================================================
+Time: 2026-10-08 11:20:40.137228
+Attempt: 1
+Passed: True
+
+--- CODE ---
+def reverse_string(s):
+    return s[::-1]
+
+assert reverse_string("abc") == "cba"
+--- OUTPUT ---
+
+--- ERROR ---
+
+--- RETURN CODE ---
+0
+
+============================================================
+Time: 2026-10-08 11:22:52.344052
+Attempt: 1
+Passed: True
+
+--- CODE ---
+def safe_divide(a, b):
+    return a / b if b != 0 else 0
+
+assert safe_divide(10, 2) == 5
+assert safe_divide(10, 0) == 0
+--- OUTPUT ---
+
+--- ERROR ---
+
+--- RETURN CODE ---
+0
+
+============================================================
+Time: 2026-10-08 11:24:25.214833
+Attempt: 1
+Passed: True
+
+--- CODE ---
+def second_largest(numbers):
+    unique_numbers = sorted(set(numbers))
+    return unique_numbers[-2]
+
+assert second_largest([5, 1, 5, 3, 3]) == 3
+--- OUTPUT ---
+
+--- ERROR ---
+
+--- RETURN CODE ---
+0
+
+============================================================
+Time: 2026-10-08 11:26:33.952999
+Attempt: 1
+Passed: False
+
+--- CODE ---
+def is_palindrome(s: str) -> bool:
+    """Return True if s is a palindrome, False otherwise."""
+    return s == s[::-1]
+
+# Assertions to verify correctness
+assert is_palindrome("radar") == True
+assert is_palindrome("hello") == False
+assert is_palindrome("") == True
+assert is_palindrome("a") == True
+assert is_palindrome("ab") == False
+assert is_palindrome("abba") == True
+assert is_palindrome("Aba") == False  # case-sensitive check
+assert is_palindrome("Madam") == False  # case-sensitive check
+assert is_palindrome("MadamMadam") == False  # case-sensitive check
+assert is_palindrome("MadamMadam".lower()) == True  # case-insensitive if lowercased
+assert is_palindrome("12321") == True
+assert is_palindrome("12345") == False
+assert is_palindrome("!@#@!") == True
+assert is_palindrome("!@#@") == False
+assert is_palindrome("  ") == True  # two spaces are palindrome
+assert is_palindrome("  a  ") == True  # spaces included
+assert is_palindrome("  a") == False  # not palindrome due to trailing space
+assert is_palindrome("a  ") == False  # not palindrome due to leading space
+assert is_palindrome("a b a") == True  # spaces considered
+assert is_palindrome("a b c") == False  # not palindrome
+assert is_palindrome("😊🙃😊") == True  # Unicode characters
+assert is_palindrome("😊🙃😢") == False  # not palindrome
+assert is_palindrome("😊🙃😊🙃😊") == True  # palindrome with repeated pattern
+assert is_palindrome("😊🙃😊🙃😢") == False  # not palindrome
+assert is_palindrome("😊🙃😊🙃😊🙃😊") == True  # longer palindrome
+assert is_palindrome("😊🙃😊🙃😊🙃😢") == False  # longer non-palindrome
+assert is_palindrome("😊🙃😊🙃😊🙃😊🙃😊") == True  # even length palindrome
+assert is_palindrome("😊🙃😊🙃😊🙃😊🙃😢") == False  # even length non-palindrome
+assert is_palindrome("😊🙃😊🙃😊🙃😊🙃😊🙃😊") == True  # odd length palindrome
+assert is_palindrome("😊🙃😊🙃😊🙃😊🙃😊🙃😢") == False  # odd length non-palindrome
+assert is_palindrome("😊🙃😊🙃😊🙃😊🙃😊🙃😊🙃😊") == True  # longer palindrome
+assert is_palindrome("😊🙃😊🙃😊🙃😊🙃😊🙃😊🙃😢") == False  # longer non-palindrome
+assert is_palindrome("😊🙃😊🙃😊🙃😊🙃😊🙃😊🙃😊🙃😊") == True  # even longer palindrome
+assert is_palindrome("😊🙃😊🙃😊🙃😊🙃😊🙃😊🙃😊🙃😢") == False  # even longer non-palindrome
+assert is_palindrome("😊🙃😊🙃😊🙃😊🙃😊🙃😊🙃😊🙃😊🙃😊") == True  # even longer palindrome
+assert is_palindrome("😊🙃😊🙃😊🙃😊🙃😊🙃😊🙃😊🙃😊🙃😢") == False  # even longer non-palindrome
+assert is_palindrome("😊🙃😊🙃😊🙃😊🙃😊🙃😊🙃😊🙃😊🙃😊🙃😊") == True  # even longer palindrome
+assert is_palindrome("😊🙃😊🙃😊🙃😊🙃😊🙃😊🙃😊🙃😊🙃😢") == False  # even longer non-palindrome
+assert is_palindrome("😊🙃😊🙃😊🙃😊🙃😊🙃😊🙃😊🙃😊🙃😊🙃😊🙃😊") == True  # even longer palindrome
+assert is_palindrome("😊🙃😊🙃😊🙃😊🙃😊🙃😊🙃😊🙃😊🙃😢") == False  # even longer non-palindrome
+assert is_palindrome("😊🙃😊🙃😊🙃😊🙃😊🙃😊🙃😊🙃😊🙃😊🙃😊🙃😊🙃😊") == True  # even longer palindrome
+assert is_palindrome("😊🙃😊🙃😊🙃😊🙃😊🙃😊🙃😊🙃😊🙃😢") == False  # even longer non-palindrome
+assert is_palindrome("😊🙃😊🙃😊🙃😊🙃😊🙃😊🙃😊🙃😊🙃😊🙃😊🙃😊🙃😊🙃😊") == True  # even longer palindrome
+assert is_palindrome("😊🙃😊🙃😊🙃😊🙃😊🙃😊🙃😊🙃😊🙃😢") == False  # even longer non-palindrome
+assert is_palindrome("😊🙃😊🙃😊🙃😊🙃😊🙃😊🙃😊🙃😊🙃😊🙃😊🙃😊🙃😊🙃😊🙃😊") == True  # even longer palindrome
+assert is_palindrome("😊🙃😊🙃😊🙃😊🙃😊🙃😊🙃😊🙃😊🙃😢") == False  # even longer non-palindrome
+assert is_palindrome("😊🙃😊🙃😊🙃😊🙃😊🙃😊🙃😊🙃😊🙃😊🙃😊🙃😊🙃😊🙃😊🙃😊🙃😊") == True  # even longer palindrome
+assert is_palindrome("😊🙃😊🙃😊🙃😊🙃😊🙃😊🙃😊🙃😊🙃😢") == False  # even longer non-palindrome
+assert is_palindrome("😊🙃😊🙃😊🙃😊🙃😊🙃😊🙃😊🙃😊🙃😊🙃😊🙃😊🙃😊🙃😊🙃😊🙃😊🙃😊") == True  # even longer palindrome
+assert is_palindrome("😊🙃😊🙃😊🙃😊🙃😊🙃😊🙃😊🙃😊🙃😢") == False  # even longer non-palindrome
+assert is_palindrome("😊🙃😊🙃😊🙃😊🙃😊🙃😊🙃😊🙃😊🙃😊🙃😊🙃😊🙃😊🙃😊🙃😊🙃😊🙃😊🙃😊") == True  # even longer palindrome
+assert is_palindrome("😊🙃😊🙃😊🙃😊🙃😊🙃😊🙃😊🙃😊🙃😢") == False  # even longer non-palindrome
+assert is_palindrome("😊🙃😊🙃😊🙃😊🙃😊🙃😊🙃😊🙃😊🙃😊🙃😊🙃😊🙃😊🙃😊🙃😊🙃😊🙃😊🙃😊🙃😊") == True  # even longer palindrome
+assert is_palindrome("😊🙃😊🙃😊🙃😊🙃😊🙃😊🙃😊🙃😊🙃😢") == False  # even longer non-palindrome
+assert is_palindrome("😊🙃😊🙃😊🙃😊🙃😊🙃😊🙃😊🙃😊🙃😊🙃😊🙃😊🙃😊🙃😊🙃😊🙃😊🙃😊🙃😊🙃😊🙃😊") == True  # even longer palindrome
+assert is_palindrome("😊🙃😊🙃😊🙃😊🙃😊🙃😊🙃😊🙃😊🙃😢") == False  # even longer non-palindrome
+assert is_palindrome("😊🙃😊🙃😊🙃😊🙃😊🙃😊🙃😊🙃😊🙃😊🙃😊🙃😊🙃😊🙃😊🙃😊🙃😊🙃😊🙃😊🙃😊🙃😊🙃😊") == True  # even longer palindrome
+assert is_palindrome("😊🙃😊🙃😊🙃😊🙃😊🙃😊🙃😊🙃😊🙃😢") == False  # even longer non-palindrome
+assert is_palindrome("😊🙃😊🙃😊🙃😊🙃😊🙃😊🙃😊🙃😊🙃😊🙃😊🙃😊🙃😊🙃😊🙃😊🙃😊🙃😊🙃😊
+--- OUTPUT ---
+
+--- ERROR ---
+  File "/var/folders/b3/8l7txh0d39z308v0shf304f00000gn/T/tmpwq_7j9oe.py", line 64
+    assert is_palindrome("😊🙃😊🙃😊🙃😊🙃😊🙃😊🙃😊🙃😊🙃😊🙃😊🙃😊🙃😊🙃😊🙃😊🙃😊🙃😊🙃😊
+                         ^
+SyntaxError: unterminated string literal (detected at line 64)
+
+--- RETURN CODE ---
+1
+
+============================================================
+Time: 2026-10-08 11:26:36.779203
+Attempt: 2
+Passed: True
+
+--- CODE ---
+
+--- OUTPUT ---
+
+--- ERROR ---
+
+--- RETURN CODE ---
+0
+
+============================================================
+Time: 2026-10-08 11:27:25.543710
+Attempt: 1
+Passed: True
+
+--- CODE ---
+def calculate_sum(numbers):
+    total = 0
+    for n in numbers:
+        total += n
+    return total
+
+assert calculate_sum([1, 2, 3, 4]) == 10
+--- OUTPUT ---
+
+--- ERROR ---
+
+--- RETURN CODE ---
+0
+
+============================================================
+Time: 2026-10-08 11:28:04.356618
+Attempt: 1
+Passed: True
+
+--- CODE ---
+def find_max(numbers):
+    if not numbers:
+        raise ValueError("Empty list")
+    max_val = numbers[0]
+    for num in numbers[1:]:
+        if num > max_val:
+            max_val = num
+    return max_val
+
+assert find_max([1, 5, 3, 9, 2]) == 9
+--- OUTPUT ---
+
+--- ERROR ---
+
+--- RETURN CODE ---
+0
+
+============================================================
+Time: 2026-10-08 11:29:24.863510
+Attempt: 1
+Passed: False
+
+--- CODE ---
+def square_root(n):
+    return math.sqrt(n)
+
+assert square_root(9) == 3.0
+--- OUTPUT ---
+
+--- ERROR ---
+Traceback (most recent call last):
+  File "/var/folders/b3/8l7txh0d39z308v0shf304f00000gn/T/tmpjuh62tv4.py", line 4, in <module>
+    assert square_root(9) == 3.0
+           ~~~~~~~~~~~^^^
+  File "/var/folders/b3/8l7txh0d39z308v0shf304f00000gn/T/tmpjuh62tv4.py", line 2, in square_root
+    return math.sqrt(n)
+           ^^^^
+NameError: name 'math' is not defined. Did you forget to import 'math'?
+
+--- RETURN CODE ---
+1
+
+============================================================
+Time: 2026-10-08 11:29:25.742765
+Attempt: 2
+Passed: True
+
+--- CODE ---
+def square_root(n):
+    return __import__('math').sqrt(n)
+
+assert square_root(9) == 3.0
+--- OUTPUT ---
+
+--- ERROR ---
+
+--- RETURN CODE ---
+0
