@@ -1,0 +1,1 @@
+Create a Python program that checks whether a number is even or odd. Include input validation, clear output messages, and basic error handling.
