@@ -22,8 +22,9 @@ Technologies Used
 Project Structure
 
 week2-CoreAgentLoop/
- ├── logs
- ├── tests
+|
+├── logs
+├── tests
 ├── .env.example
 ├── .gitignore
 ├── README.md
