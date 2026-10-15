@@ -21,8 +21,7 @@ Technologies Used
 
 Project Structure
 
-week2-CoreAgentLoop/
-
+week2-CoreAgentLoop
 ├── logs
 ├── tests
 ├── .env.example
